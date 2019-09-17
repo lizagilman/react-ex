@@ -12,9 +12,10 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import bookDataDefaultProps, { titlieze, selectImg } from '../../../helpers';
-import * as styles from './editBookModalStyles';
+import bookDataDefaultProps, { titlieze } from '../../../helpers';
+import * as styles from './EditBookModalStyles';
 
+// EditBookModal used BOTH for editing a book AND adding book
 const EditBookModal = (props) => {
   const {
     fullScreen,
@@ -52,7 +53,7 @@ const EditBookModal = (props) => {
       saveNewBook({
         id: uuidv1(),
         ...bookDataToUpdate,
-        thumbnail: selectImg(),
+        thumbnail: 'images/empty.png',
       });
     }
   };

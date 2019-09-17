@@ -1,5 +1,5 @@
-const webpack = require("webpack");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
@@ -9,53 +9,53 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
-              presets: ["@babel/preset-env", "@babel/preset-react"]
-            }
-          }
-        ]
+              presets: ['@babel/preset-env', '@babel/preset-react'],
+            },
+          },
+        ],
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader"
-          }
-        ]
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["eslint-loader"]
+        use: ['eslint-loader'],
       },
 
       {
         test: /\.less$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader',
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               sourceMap: true,
               modules: true,
-              localIdentName: "[local]___[hash:base64:5]"
-            }
-          }
-        ]
-      }
-    ]
+              localIdentName: '[local]___[hash:base64:5]',
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: './src/index.html',
+      filename: './index.html',
     }),
     new webpack.LoaderOptionsPlugin({
-      debug: true
-    })
+      debug: true,
+    }),
   ],
-  watch: true
+  watch: true,
 };

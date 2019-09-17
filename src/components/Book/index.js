@@ -9,7 +9,7 @@ const mapStateToProps = ({ book }, ownProps) => ({
   shouldDisplayDeleteModal:
     book.deleteBookModalToDisplay[ownProps.bookData.id] || false,
   shouldDisplayEditModal:
-    book.editBookModalToDisplay[ownProps.bookData.id] || false,
+    book.EditBookModalToDisplay[ownProps.bookData.id] || false,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);

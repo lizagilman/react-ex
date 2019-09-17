@@ -5,11 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import AddIcon from '@material-ui/icons/Add';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import axios from 'axios';
-import uuidv1 from 'uuid/v1';
 import Book from '../Book';
-import EditBookModal from '../Book/components/editBookModal';
-import bookDataDefaultProps, { loremIpsum, selectImg } from '../helpers';
+import EditBookModal from '../Book/components/EditBookModal';
+import bookDataDefaultProps from '../helpers';
 
 const styles = theme => ({
   root: {
@@ -43,50 +41,9 @@ const styles = theme => ({
 });
 
 class Books extends React.Component {
-  componentWillMount() {
-    localStorage.setItem('imgSelcetionIndex', 0);
-    const { loadBooks } = this.props;
-
-    /* eslint-disable-next-line */
-    const formatResults = data => data.items.map(item => formatBookData(item));
-
-    const formatBookData = (book) => {
-      const { id } = book;
-      const {
-        title, authors, publishedDate, description,
-      } = book.volumeInfo;
-
-      // HACK: get random image from pre-prepared images.
-      // This is done since not all books objects have decent thumbnail. 
-      // If there were decent images the 2 lines below should have been used
-      // to get the thumbnail :
-
-      // const { imageLinks } = book.volumeInfo;
-      // const thumbnail = imageLinks ? imageLinks.thumbnail : noImgUrl;
-
-      const thumbnail = selectImg();
-      const bookDescription = description || loremIpsum;
-
-      const unavailable = 'No data available';
-
-      return {
-        id: id || uuidv1(),
-        title: title || unavailable,
-        author: authors ? authors[0] : 'No data available',
-        date:
-          publishedDate && publishedDate.length < 5
-            ? `${publishedDate}-01-01`
-            : publishedDate || unavailable,
-        description: bookDescription,
-        thumbnail,
-      };
-    };
-
-    axios
-      .get('booksData.json')
-      .then((response) => {
-        loadBooks(formatResults(response.data));
-      });
+  componentDidMount() {
+    const { getBooks } = this.props;
+    getBooks();
   }
 
   render() {
@@ -101,6 +58,7 @@ class Books extends React.Component {
     const Modal = (
       <EditBookModal handleClose={closeAddBookModal} bookData={{}} />
     );
+
     const Spinner = (
       <CircularProgress
         className={classes.progress}

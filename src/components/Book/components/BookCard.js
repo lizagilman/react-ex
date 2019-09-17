@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { noImgUrl, titlieze, selectImg } from '../../helpers';
+import { titlieze, noImgUrl } from '../../helpers';
 
 const BookCard = (props) => {
   const {
@@ -20,7 +20,7 @@ const BookCard = (props) => {
           component="image"
           className={classes.media}
           title={bookData.title}
-          image={bookData.thumbnail || selectImg() || noImgUrl}
+          image={bookData.thumbnail || noImgUrl}
           onClick={(e) => {
             openEditBookModal(e);
           }}

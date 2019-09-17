@@ -39,7 +39,7 @@
     },
     "imageLinks": {
      "smallThumbnail": "http://books.google.com/books/content?id=s5T_swEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-     "thumbnail": "http://books.google.com/books/content?id=s5T_swEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+     "thumbnail": "images/1.jpg"
     },
     "language": "en",
     "previewLink": "http://books.google.com/books?id=s5T_swEACAAJ&dq=%27%27&hl=&cd=1&source=gbs_api",
@@ -106,7 +106,7 @@
     },
     "imageLinks": {
      "smallThumbnail": "http://books.google.com/books/content?id=DEXGHFwdl44C&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-     "thumbnail": "http://books.google.com/books/content?id=DEXGHFwdl44C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+     "thumbnail": "images/2.jpg"
     },
     "language": "en",
     "previewLink": "http://books.google.com/books?id=DEXGHFwdl44C&dq=%27%27&hl=&cd=2&source=gbs_api",
@@ -169,8 +169,8 @@
     },
     "imageLinks": {
      "smallThumbnail": "http://books.google.com/books/content?id=R24NAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-     "thumbnail": "http://books.google.com/books/content?id=R24NAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-    },
+     "thumbnail": "images/3.jpg"
+   },
     "language": "en",
     "previewLink": "http://books.google.com/books?id=R24NAAAAYAAJ&printsec=frontcover&dq=%27%27&hl=&cd=3&source=gbs_api",
     "infoLink": "https://play.google.com/store/books/details?id=R24NAAAAYAAJ&source=gbs_api",
@@ -245,7 +245,7 @@
     },
     "imageLinks": {
      "smallThumbnail": "http://books.google.com/books/content?id=jVYnCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-     "thumbnail": "http://books.google.com/books/content?id=jVYnCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+     "thumbnail": "images/4.jpg"
     },
     "language": "en",
     "previewLink": "http://books.google.com/books?id=jVYnCgAAQBAJ&printsec=frontcover&dq=%27%27&hl=&cd=4&source=gbs_api",
@@ -332,8 +332,8 @@
     },
     "imageLinks": {
      "smallThumbnail": "http://books.google.com/books/content?id=oYrodg7UHSsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-     "thumbnail": "http://books.google.com/books/content?id=oYrodg7UHSsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-    },
+     "thumbnail": "images/5.jpg"
+   },
     "language": "en",
     "previewLink": "http://books.google.com/books?id=oYrodg7UHSsC&printsec=frontcover&dq=%27%27&hl=&cd=5&source=gbs_api",
     "infoLink": "https://play.google.com/store/books/details?id=oYrodg7UHSsC&source=gbs_api",
@@ -432,7 +432,7 @@
     },
     "imageLinks": {
      "smallThumbnail": "http://books.google.com/books/content?id=ICSpCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-     "thumbnail": "http://books.google.com/books/content?id=ICSpCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+     "thumbnail": "images/6.jpg"
     },
     "language": "en",
     "previewLink": "http://books.google.com/books?id=ICSpCwAAQBAJ&printsec=frontcover&dq=%27%27&hl=&cd=6&source=gbs_api",

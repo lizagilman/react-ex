@@ -21,8 +21,6 @@ export const titlieze = (str) => {
 };
 
 export const validateField = (field, value) => {
-  // const alphaNumericNonEmpty = /^[a-zA-Z0-9\s]+$/;
-  // const alphabeticNonEmpry =  /^[a-zA-Z\s]+$/;
   const nonEmpty = /^(.+)$/;
 
   const validationRegexHash = {
@@ -38,56 +36,6 @@ export const validateField = (field, value) => {
 
 export const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit';
 
-export const noImgUrl = 'http://doctor10.net/liza/heroloBooks/images/noimg.jpg';
-
-const booksCovers = [
-  { url: 'http://doctor10.net/liza/heroloBooks/images/1.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/2.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/3.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/4.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/5.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/6.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/7.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/8.jpg', selected: false },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/9.jpg', selected: false },
-  {
-    url: 'http://doctor10.net/liza/heroloBooks/images/10.jpg',
-    selected: false,
-  },
-  {
-    url: 'http://doctor10.net/liza/heroloBooks/images/11.jpg',
-    selected: false,
-  },
-  {
-    url: 'http://doctor10.net/liza/heroloBooks/images/12.jpg',
-    selected: false,
-  },
-  {
-    url: 'http://doctor10.net/liza/heroloBooks/images/13.jpg',
-    selected: false,
-  },
-  {
-    url: 'http://doctor10.net/liza/heroloBooks/images/14.jpg',
-    selected: false,
-  },
-  { url: 'http://doctor10.net/liza/heroloBooks/images/15.jpg', selected: false },
-];
-
-/* eslint-disable-next-line */
-export const selectImg = () => {
-  /* eslint-disable-next-line */
-  const i = parseInt(localStorage.getItem("imgSelcetionIndex"));
-
-  let selection = null;
-
-  if (i >= booksCovers.length) return noImgUrl;
-
-  while (!booksCovers[i].selected) {
-    selection = booksCovers[i];
-    booksCovers[i].selected = true;
-    localStorage.setItem('imgSelcetionIndex', i + 1);
-    return selection.url;
-  }
-};
+export const noImgUrl = 'images/empty.png';
 
 export default bookDataDefaultProps;

@@ -8,7 +8,7 @@ import {
 
 const initialState = {
   deleteBookModalToDisplay: {},
-  editBookModalToDisplay: {},
+  EditBookModalToDisplay: {},
   newBookData: {},
 };
 
@@ -17,12 +17,12 @@ export default function (state = initialState, action) {
     case SHOW_EDIT_BOOK_MODAL:
       return {
         ...state,
-        editBookModalToDisplay: { [action.payload.id]: true },
+        EditBookModalToDisplay: { [action.payload.id]: true },
       };
     case CLOSE_EDIT_BOOK_MODAL:
       return {
         ...state,
-        editBookModalToDisplay: { [action.payload.id]: false },
+        EditBookModalToDisplay: { [action.payload.id]: false },
       };
     case SHOW_DELETE_BOOK_MODAL:
       return {
